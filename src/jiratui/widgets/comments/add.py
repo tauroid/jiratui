@@ -26,7 +26,7 @@ class AddCommentScreen(Screen[str]):
         vertical = Vertical()
         vertical.border_title = self.title
         with vertical:
-            yield TextArea.code_editor('', language='markdown', show_line_numbers=False)
+            yield TextArea.code_editor('', language='markdown', show_line_numbers=False, soft_wrap=True)
             with ItemGrid(classes='add-comment-grid-buttons'):
                 yield Button('Save', variant='success', id='add-comment-button-save', disabled=True)
                 yield Button('Cancel', variant='error', id='add-comment-button-quit')
